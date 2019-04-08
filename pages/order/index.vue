@@ -12,10 +12,12 @@
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group ">
             <label for="Customer" >Customer</label >
             <input name="Customer" id="Customer" v-model="formData.customer" type="text" class="form-control" >
           </div>
+        </div>
+        <div class="col-md-6">
           <div class="form-group">
             <label for="PMethod" >Payment Method</label >
             <select name="PMethod" id="PMethod" v-model="formData.paymentMethod" class="form-control">
@@ -43,7 +45,7 @@
         <th>Quantity</th>
         <th>Total</th>
         <th>
-          <a class="btn btn-sm btn-success text-white" @click="AddOrEditOrderItem(formData.OrderID)"><i class="fa fa-plus"></i> Add Item</a>
+          <a class="btn btn-sm btn-success text-white" @click="AddOrEditOrderItem(null, formData.orderId)"><i class="fa fa-plus"></i> Add Item</a>
         </th>
         </thead>
         <tbody>
@@ -53,18 +55,17 @@
           </td>
         </tr>
 
-        <tr v-for="item in orderItems">
+        <tr v-for="(item, index) in orderItems">
           <td>{{item.ItemName}}</td>
           <td>{{item.Price}}</td>
           <td>{{item.Quantity}}</td>
           <td>{{item.Total}}</td>
           <td>
-            <a class="btn btn-sm btn-info text-white" @click="AddOrEditOrderItem(i,service.formData.OrderID)"><i class="fa fa-pencil"></i></a>
-            <a class="btn btn-sm btn-danger text-white ml-1" @click="onDeleteOrderItem(item.OrderItemID,i)"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-sm btn-info text-white" @click="AddOrEditOrderItem(index, formData.orderId)"><i class="fa fa-pencil"></i></a>
+            <a class="btn btn-sm btn-danger text-white ml-1" @click="onDeleteOrderItem(item.orderItemId,index)"><i class="fa fa-trash"></i></a>
           </td>
         </tr>
         </tbody>
-
       </table>
 
       <div class="form-group">
@@ -83,6 +84,7 @@
     data() {
       return {
         formData: {
+          orderId: 0,
           orderNo: 0,
           customer: '',
           paymentMethod: '',
@@ -92,7 +94,7 @@
       }
     },
     methods: {
-      AddOrEditOrderItem(){
+      AddOrEditOrderItem(index){
 
       },
       onDeleteOrderItem() {

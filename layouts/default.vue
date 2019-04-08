@@ -14,4 +14,16 @@
 </template>
 
 <style>
+.jumbotron{
+  padding-top: 0px;
+  background: #fff;
+}
+
+.form-control,.input-group-text{
+  border:1px solid #0080ff
+}
+
+table.table-hover tbody tr:hover {
+  cursor: pointer;
+}
 </style>
