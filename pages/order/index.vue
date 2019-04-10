@@ -45,7 +45,11 @@
         <th>Quantity</th>
         <th>Total</th>
         <th>
-          <a class="btn btn-sm btn-success text-white" @click="AddOrEditOrderItem(null, formData.orderId)"><i class="fa fa-plus"></i> Add Item</a>
+          <a class="btn btn-sm btn-success text-white" @click="AddOrEditOrderItem(null, formData.orderId)">
+            <!--<i class="fa fa-plus"></i> -->
+            <font-awesome-icon icon="['fab', 'facebook']"  style="font-size: 22px"/>
+            Add Item
+          </a>
         </th>
         </thead>
         <tbody>

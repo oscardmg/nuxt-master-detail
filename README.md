@@ -1,7 +1,7 @@
 # nuxt-master-detail
 
 > ejemplo de factura encabezado detalle master detail
-
+[Tutorial url](https://github.com/CodAffection/Angular-7-Master-Detail-CRUD-with-Web-API)
 ## Build Setup
 
 ``` bash

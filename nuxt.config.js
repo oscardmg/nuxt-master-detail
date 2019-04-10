@@ -27,12 +27,14 @@ export default {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/fontawesome'
   ],
 
   /*
@@ -42,21 +44,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
-    [
-      'nuxt-fontawesome', {
-      imports: [
-        {
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['fas']
-        },
-        {
-          set:'@fortawesome/free-brands-svg-icons',
-          icons: ['fab']
-        }
-      ]
-    }
-    ]
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Axios module configuration
