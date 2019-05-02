@@ -2,7 +2,21 @@
 
 > ejemplo de factura encabezado detalle master detail
 [Tutorial url](https://github.com/CodAffection/Angular-7-Master-Detail-CRUD-with-Web-API)
+
+# subir a githubpages
+[tutorial](https://medium.com/@ianaya89/crea-tu-sitio-web-con-github-pages-y-nuxt-js-6a90fd0a0dc4)
+modificar package.json
+```
+"scripts": {
+  // otros scripts (no borrarlos)
+  
+  "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+}
+```
+
 ## Build Setup
+
+
 
 ``` bash
 # install dependencies
