@@ -16,7 +16,7 @@ modificar package.json
 Modificar nuxt.config.js y adicionar para que no genere error the server responded with a status of 404
 ```
 router: {
-  base: '/nuxt-master-detail/'
+  base: '/nuxt-master-detail/' 
 },
 ```
 
