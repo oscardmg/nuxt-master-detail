@@ -18,6 +18,10 @@ export default {
     ]
   },
 
+  router: {
+    base: '/nuxt-master-detail/'
+  },
+
   /*
   ** Customize the progress-bar color
   */

@@ -13,6 +13,12 @@ modificar package.json
   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
 }
 ```
+Modificar nuxt.config.js y adicionar para que no genere error the server responded with a status of 404
+```
+router: {
+  base: '/nuxt-master-detail/'
+},
+```
 
 ## Build Setup
 
